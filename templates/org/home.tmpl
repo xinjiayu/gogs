@@ -34,7 +34,7 @@
 				{{template "explore/repo_list" .}}
 				{{template "explore/page" .}}
 			</div>
-
+			{{if .IsOrganizationOwner}}
 			<div class="ui five wide column">
 				<div class="ui top attached header">
 					<strong>{{.i18n.Tr "org.people"}}</strong>
@@ -80,6 +80,7 @@
 					{{end}}
 				{{end}}
 			</div>
+			{{end}}
 		</div>
 	</div>
 </div>
